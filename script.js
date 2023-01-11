@@ -107,6 +107,7 @@ function AddToFav(details) {
     } else {
       favMovieInLocal.push(details.imdbID)
       localStorage.setItem('favMoviesArray', JSON.stringify(favMovieInLocal))
+      addToFavBtn.innerText = 'Added'
     }
 }
 

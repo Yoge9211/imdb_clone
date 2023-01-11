@@ -102,11 +102,12 @@ if (!localStorage.getItem('favMoviesArray')) {
 function AddToFav(details) {
   // console.log(details)
   const addToFavBtn = document.getElementById('favMovieId')
-  addToFavBtn.addEventListener('click', async () => {
-    console.log(details.imdbID)
-    favMovieInLocal.push(details.imdbID)
-    localStorage.setItem('favMoviesArray', JSON.stringify(favMovieInLocal))
-  })
+   if (favMovieInLocal.includes(details.imdbID)) {
+      alert('movie is already added in favorite list')
+    } else {
+      favMovieInLocal.push(details.imdbID)
+      localStorage.setItem('favMoviesArray', JSON.stringify(favMovieInLocal))
+    }
 }
 
 window.addEventListener('click', (event) => {

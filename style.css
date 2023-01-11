@@ -1,0 +1,294 @@
+/*  FontFamily import from Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Managing Default Conditions  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/*  All Anchor Tag  */
+a {
+    text-decoration: none;
+}
+
+
+/*   Styles for Container */
+.bodyContainer {
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+
+/*  Styles For Navbar Starts From  Here */
+.navigation {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    background-color: #161616;
+}
+
+.navigation .leftSide {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navigation .leftSide .logo {
+
+    padding: 5px;
+    background-color: #f5c518;
+    border-radius: 5px;
+}
+
+.navigation .leftSide .logo a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: 400;
+
+}
+
+.navigation .leftSide .fav {
+    text-decoration: none;
+    color: #f5c518;
+
+    font-weight: 600;
+}
+
+
+.search-container {
+    background-color: #000000;
+    height: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+/*  Navbar styles ends here */
+
+/*  Search Movie styles starts */
+
+.search-element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.search-element h3 {
+
+    align-self: center;
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.search-element .form-control {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    outline: none;
+    color: #1d1d1d;
+    width: 350px;
+    border-radius: 20px;
+}
+
+.searchList {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    z-index: 10;
+}
+
+.searchList .searchList-item {
+    background-color: #9b4a4a;
+    padding: 0.5rem;
+    border-bottom: #1d1d1d;
+    width: calc(350px - 8px);
+    color: rgb(224, 165, 165);
+    cursor: pointer;
+}
+
+.searchList .searchList-item:Hover {
+    background-color: #5c2222;
+}
+
+.searchList-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    align-items: center;
+}
+
+.search-item-thumbnail img {
+    width: 40px;
+    margin-right: 1rem;
+}
+
+.search-item-info h3 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.search-item-info p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    opacity: 0.6;
+}
+
+
+.searchList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.searchList::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.searchList::-webkit-scrollbar-thumb {
+    background-color: rgb(224, 18, 11);
+    outline: none;
+    border-radius: 10px;
+}
+
+
+.hide-searchList {
+    display: none;
+}
+
+/*  Search Styles ends */
+
+
+/* Display searchResult styles Starts */
+.result-grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.movie-poster img {
+    max-width: 300px;
+    margin: 0 auto;
+    border: 4px solid #fff;
+    width: 100%;
+    display: block;
+}
+
+.movieInformation {
+    text-align: center;
+    color: #fff;
+    padding-top: 3rem;
+}
+
+
+.movie-title {
+    font-size: 2rem;
+    color: rgb(233, 14, 14);
+}
+
+.movie-misc-info {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.movieInformation .movieReleaseYear {
+    font-weight: 500;
+}
+
+.movieInformation .rated {
+    background-color: var(--yellow-color);
+    padding: 0.4rem;
+    margin: 0 0.4rem;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.movieInformation .movieReleasedDate {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.movieInformation .movieWriter {
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+.movieInformation .genre {
+    background-color: #2e2e2e;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+
+.movieInformation .plot {
+    max-width: 400px;
+    margin: 1rem auto;
+}
+
+.movieInformation .language {
+    color: rgb(221, 112, 10);
+}
+
+.movieInformation .awards {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.movieInformation .awards i {
+    color: rgb(218, 26, 13);
+    margin: 1rem 0.7rem 0 0;
+    font-size: 30px;
+}
+
+.movieInformation .AddToFavBtn {
+    background-color: rgb(231, 39, 39);
+    color: white;
+    width: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    transition: 0.5s all linear;
+    font-size: 23px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.movieInformation .AddToFavBtn:hover {
+    background-color: rgb(221, 34, 34);
+    color: rgb(0, 0, 0);
+    width: 220px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Display searchResult styles ends */

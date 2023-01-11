@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>IMDb Clone </title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bodyContainer">
+
+        <!-- Start of logo and Navigation Header -->
+        <div class="navigation">
+            <div class="leftSide">
+                <div class="logo">
+                    <a href="">IMDb</a>
+                </div>
+                <a class="fav" href="favorites.html">Favourites</a>
+
+            </div>
+        </div>
+        <!-- end  -->
+
+        <!-- Movie search suggestion container based on api search -->
+        <div class="search-container">
+            <div class="search-element">
+                <h3>Search Movie:</h3>
+                <input type="text" class="form-control" placeholder="Search Movie Title ..." id="movie-search-box"
+                    onkeyup="findMovies()" onclick="findMovies()">
+
+                <div class="searchList" id="searchList">
+                    <!-- list here -->
+                    <!-- <div class = "searchList-item">
+                        <div class = "search-item-thumbnail">
+                            <img src = "medium-cover.jpg">
+                        </div>
+                        <div class = "search-item-info">
+                            <h3>Guardians of the Galaxy Vol. 2</h3>
+                            <p>2017</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- Search Movie Result Container -->
+        <div class="container">
+            <div class="result-container">
+                <div class="result-grid" id="result-grid">
+                    <!-- movie information here -->
+                    <div class="movie-poster">
+                        <img src='Thor.jpg' alt="movie poster">
+                    </div>
+                    <div class="movieInformation">
+                        <h3 class="movie-title">Thor</h3>
+                        <ul class="movie-misc-info">
+                            <li class="movieReleaseYear">Year:2011}</li>
+                            <li class="rated">Ratings: PG-13</li>
+                            <li class="movieReleasedDate">Released: 06 May 2011</li>
+                        </ul>
+                        <p class="genre"><b>Genre:</b>Action, Adventure, Fantasy</p>
+                        <p class="movieWriter"><b>Writer:</b>Ashley Miller, Zack Stentz, Don Payne</p>
+                        <p class="actors"><b>Actors: </b>Chris Hemsworth, Anthony Hopkins, Natalie Portman</p>
+                        <p class="plot"><b>Plot:</b> The powerful but arrogant god Thor is cast out of Asgard to live
+                            amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.</p>
+                        <p class="language"><b>Language:</b>English</p>
+                        <p class="awards"><b><i class="fas fa-award"></i></b>5 wins & 30 nominations</p>
+                        <p class="AddToFavBtn" id="favMovieId">Add to favorite</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end  -->
+    </div>
+
+    <!-- Fontawesom Script -->
+    <script src="https://kit.fontawesome.com/b45c6d8a14.js" crossorigin="anonymous"></script>
+    <!-- Script for HomePage -->
+    <script src="script.js"></script>
+</body>
+
+</html>

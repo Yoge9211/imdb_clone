@@ -20,3 +20,6 @@ Search about Kantara movie Screenshot
 Screenshot of favorits page
 
 ![Screenshot (9)](https://user-images.githubusercontent.com/111118335/211826779-8d4556e0-458a-48ab-b0da-237942fc7bb6.png)
+
+
+Demo:-  https://yoge9211.github.io/imdb_clone/
